@@ -30,10 +30,10 @@
     
     //push userguess value to userInput array
     		userInput.push(userguess);
-            console.log("full array " + userInput.join(","));
-
+ 
     //Join userInput array values with ",". after win, remove all userInput
-    //values. 
+    //values.
+    		console.log("full array " + userInput.join(",")); 
             var myInput = (userInput.join(","));
         	document.getElementById("myInput").innerHTML = myInput;
             userInput = [];
@@ -43,10 +43,11 @@
 	else if (userguess !== computerGuess) {
 		if (tries > 0)  {
                console.log(tries);
-               document.getElementById("tries").innerHTML = tries;
+               // document.getElementById("tries").innerHTML = tries;
            
             // Calculate # of guesses left.    
                tries--;
+               document.getElementById("tries").innerHTML = tries;
                console.log(tries);
             
             //push userguess value to userInput array
